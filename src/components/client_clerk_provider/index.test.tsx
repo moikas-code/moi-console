@@ -1,5 +1,3 @@
-// (This file will be moved to src/components/client_clerk_provider/index.test.tsx and then deleted)
-
 import '@testing-library/jest-dom';
 import React from 'react';
 import { render } from '@testing-library/react';
