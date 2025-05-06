@@ -1,6 +1,7 @@
+import '@testing-library/jest-dom';
 import React from 'react';
 import { render } from '@testing-library/react';
-import ClientClerkProvider from './client_clerk_provider';
+import ClientClerkProvider from './index';
 
 // Mock ClerkProvider and ApolloProvider to avoid context errors in test environment
 jest.mock('@clerk/nextjs', () => ({ ClerkProvider: ({ children }: React.PropsWithChildren<object>) => <div data-testid="clerk-provider">{children}</div> }));
