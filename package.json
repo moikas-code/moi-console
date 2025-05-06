@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "concurrently \"bun run dev:next\" \"bun run dev:mcp\"",
     "dev:next": "next dev --turbopack",
-    "dev:mcp": "bun ./mcp_server/src/index.js",
+    "dev:mcp": "bun ./mcp_server/src/index.js --hot",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
