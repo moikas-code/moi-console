@@ -2,4 +2,6 @@
 /* DaisyUI is enabled via Tailwind CSS plugin configuration */
 @import "tw-animate-css";
 
-@plugin "daisyui";
+@plugin "daisyui" {
+    themes: black;
+}

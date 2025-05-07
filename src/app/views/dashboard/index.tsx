@@ -78,20 +78,20 @@ export default function Dashboard() {
 
   return (
     
-    <div className="flex flex-row min-h-screen w-full">
+    <div className="flex flex-row min-h-screen w-full bg-base-100">
       <Sidebar_Component />
       <div className="flex-1 flex flex-col w-full">
-        <header className="flex items-center justify-end p-4 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+        <header className="flex items-center justify-end p-4 border-b border-base-300 bg-base-100">
           <UserButton afterSignOutUrl="/" />
         </header>
-        <div className="flex-1 p-6 bg-gray-50 dark:bg-gray-900 w-full">
+        <div className="flex-1 p-6 bg-base-200 w-full">
           {show_welcome && (
-            <div className="flex items-center justify-between bg-blue-100 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded p-4 mb-6">
-              <span className="text-2xl font-bold text-gray-900 dark:text-white">
+            <div className="flex items-center justify-between bg-primary/10 border border-primary rounded p-4 mb-6">
+              <span className="text-2xl font-bold text-base-content">
                 Welcome, {username}!
               </span>
               <button
-                className="ml-4 px-3 py-1 rounded bg-blue-200 dark:bg-blue-800 text-blue-900 dark:text-blue-100 hover:bg-blue-300 dark:hover:bg-blue-700 transition-colors"
+                className="ml-4 px-3 py-1 rounded btn btn-secondary"
                 onClick={() => set_show_welcome(false)}
                 aria-label="Dismiss welcome message"
               >
@@ -99,10 +99,10 @@ export default function Dashboard() {
               </button>
             </div>
           )}
-          <h2>Tools</h2>
-          <ul>
+          <h2 className="text-lg font-bold text-base-content mb-2">Tools</h2>
+          <ul className="space-y-2">
             {data.tools.map((tool: tool) => (
-              <li key={tool.id}>
+              <li key={tool.id} className="bg-base-100 rounded p-2 border border-base-300">
                 <strong>{tool.name}</strong> - {tool.description} (Created: {tool.created_at})
               </li>
             ))}
