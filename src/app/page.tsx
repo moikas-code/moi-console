@@ -1,4 +1,6 @@
 import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs';
+import { SignedInView } from './views/signed_in_view';
+import { SignedOutView } from './views/signed_out_view';
 
 export default function landing_page() {
   return (
@@ -13,22 +15,10 @@ export default function landing_page() {
           </p>
         </div>
         <SignedOut>
-          <div className="flex flex-col items-center gap-4">
-            <SignInButton mode="modal">
-              <button className="px-8 py-3 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary/90 transition-colors text-lg">
-                Sign in to Get Started
-              </button>
-            </SignInButton>
-            <span className="text-sm text-gray-500 dark:text-gray-400">No account? Sign up in seconds.</span>
-          </div>
+          <SignedOutView />
         </SignedOut>
         <SignedIn>
-          <div className="flex flex-col items-center gap-4">
-            <span className="text-lg text-gray-800 dark:text-gray-200 font-medium">You are signed in. Go to your dashboard.</span>
-            <a href="/dashboard" className="px-8 py-3 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary/90 transition-colors text-lg">
-              Go to Dashboard
-            </a>
-          </div>
+          <SignedInView />
         </SignedIn>
       </div>
     </div>
