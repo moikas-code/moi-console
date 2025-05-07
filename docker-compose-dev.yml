@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  postgres_db:
+    image: postgres:15
+    container_name: postgres_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres_user
+      POSTGRES_PASSWORD: postgres_password
+      POSTGRES_DB: postgres_db
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    # Uncomment below to set a custom timezone
+    # environment:
+    #   TZ: UTC
+
+volumes:
+  postgres_data:
+    # Persistent volume for PostgreSQL data
+    driver: local
+
+# Usage:
+#   docker-compose up -d
+#
+# Connection string example for .env.local:
+#   DATABASE_URL=postgresql://postgres_user:postgres_password@localhost:5432/postgres_db 

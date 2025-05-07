@@ -1,11 +1,11 @@
 # MOI Console
 
-A web-based console inspired by AWS and Google Cloud, built with Next.js, TypeScript, Tailwind CSS, Shadcn UI, and Clerk for authentication and organization management.
+A web-based console inspired by AWS and Google Cloud, built with Next.js, TypeScript, Tailwind CSS, DaisyUI, and Clerk for authentication and organization management.
 
 ## Tech Stack
 - Next.js (App Router, TypeScript)
 - Tailwind CSS
-- Shadcn UI
+- DaisyUI
 - Clerk (authentication & organization management)
 - ESLint & Prettier (code quality)
 
